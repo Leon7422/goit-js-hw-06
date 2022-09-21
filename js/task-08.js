@@ -12,9 +12,12 @@ function submitRegistraion(e) {
   }
 
   const formData = new FormData(e.currentTarget);
-  const userData = {};
+  const userData = {
+    email: "",
+    password: "",
+  };
   formData.forEach((value, type) => {
-    console.log({ [type]: value });
+    userData[type] = value;
   });
 
   console.log(userData);
